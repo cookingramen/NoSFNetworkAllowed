@@ -11,7 +11,7 @@ namespace noSFNetworkAllowed
 
         public void IsSFNetwork(VerifiedEventArgs ev)
         {
-            if (ev.Player.Nickname.Contains("#SFNetwork"))
+            if (ev.Player.Nickname.ToLower.Contains("#sfnetwork"))
             {
                 ev.Player.Kick(plugin.Config.KickReason);
             }
